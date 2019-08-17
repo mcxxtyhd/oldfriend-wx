@@ -1,0 +1,84 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+<form bindsubmit="formSubmit" bindreset="formReset">
+ <view class = "box box-1">类别：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementReward}}</view>
+ </view>
+ <view class = "box box-1">城市：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementCity}}</view>
+ </view>
+ <view class = "box box-1">区县：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementArea}}</view>
+ </view>
+ <view class = "box box-1">街道：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementStreet}}</view>
+ </view>
+ <view class = "box box-1">时间：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementBegindatetime}}</view>
+ </view>
+ <view class = "box box-1">积分：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementReward}}</view>
+ </view>
+ <view class = "box box-1">大体地址：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementRawaddress}}</view>
+ </view>
+ <view class = "box box-1">需求描述：
+    <view class="fonts">{{xuqiuxiang.lyjRequirementDescription}}</view>
+ </view>
+   <!-- <view class="biankuang1"></view>
+  <view class = "box box-1">性别：
+ <input  class = "box-item" name="userName" placeholder="请输入性别" bindinput="userNameInput"/>
+ </view>
+
+<view class="section fonts">
+  <view class="section__title fonts">籍贯：</view>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker fonts">
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+</view>
+  
+  <view class="section fonts">
+  <view class="section__title fonts">日期：</view>
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <view class="picker fonts">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+
+<view class="section fonts">
+  <view class="section__title fonts">时间选择器:</view>
+  <picker mode="time" value="{{time}}"  bindchange="bindTimeChange">
+    <view class="picker fonts">
+      当前选择: {{time}}
+    </view>
+  </picker>
+</view>
+
+ <view class = "box box-1">积分：
+ <input class = "box-item"  placeholder="请输入积分"/>
+ </view>
+ <view class = "box box-1">地址：
+ <input class = "box-item"  placeholder="请输入地址"/>
+ </view>
+ <view class = "box box-1">门牌号：
+ <input class = "box-item"  placeholder="请输入门牌号"/>
+ </view>
+ <view class = "box box-1">义工优先性别：
+ <input class = "box-item"  placeholder="请输入性别"/>
+ </view>
+ <view class = "box box-1">需求描述：
+ <input class = "box-item"  placeholder="请输入需求描述"/>
+ </view> -->
+
+  <!-- <view >
+    <button formType="submit">发布</button>
+
+  </view> -->
+</form>
+
+
+
+

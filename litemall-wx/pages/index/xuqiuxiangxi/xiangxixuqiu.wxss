@@ -1,0 +1,49 @@
+.box {
+  background-color: white;
+  margin: 20 0 55rpx;
+  display: flex;
+  font-size: 40rpx;
+  border-top:1px dashed #000;
+  border-bottom:1px dashed #000;
+  border-left:1px dashed #000;
+  border-right:1px dashed #000;
+}
+.biankuang1{
+ border: 1rpx solid rgb(248, 239, 239); 
+}
+.box-1 {
+  flex-direction: row;
+}
+.box-item {
+ flex-direction: row;
+}
+.fonts{
+  font-size: 40rpx;
+}
+
+.picker{
+    background-color: #FFFFFF;
+    flex-direction: row;
+}
+.picker1{
+    background-color: rgb(197, 37, 37);
+}
+.section{
+  margin: 0 0 55rpx;
+ display: flex;
+}
+.section_gap{
+    padding: 0 15px;
+}
+.section__title{
+
+    flex-direction: row;
+}
+.section__title1{
+
+
+}
+.section_gap .section__title{
+    padding-left: 0;
+    padding-right: 0;
+}

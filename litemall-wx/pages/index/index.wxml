@@ -1,0 +1,42 @@
+<view class="biankuang"></view>
+<view>
+
+<swiper class="swiper" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class="biankuang"></view>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">类别</view>
+    <view class="th">城市</view>
+    <view class="th ">区县</view>
+    <view class="th ">街道</view>
+    <view class="th ">日期</view>
+    <view class="th ">时间</view>
+  </view>
+  <view class="biankuang1"></view>
+  <block wx:for="{{listData}}" wx:key="{{lyjRequirementId}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap="changeName"  data-index="{{item.lyjRequirementId}}">
+       <view class="td">{{item.lyjRequirementId}}</view>
+      <view class="td" >{{item.lyjRequirementCity}}</view>
+      <view class="td" >{{item.lyjRequirementArea}}</view>
+      <view class="td" >{{item.lyjRequirementStreet}}</view>
+      <view class="td" >{{item.lyjRequirementBegindatetime}}</view>
+      <view class="td" >{{item.lyjRequirementCity}}</view>
+    </view>
+    <view class="tr" wx:else bindtap="changeName" data-index="{{item.lyjRequirementId}}">
+     <view class="td"  >{{item.lyjRequirementId}}</view>
+      <view class="td" >{{item.lyjRequirementCity}}</view>
+      <view class="td" >{{item.lyjRequirementArea}}</view>
+      <view class="td" >{{item.lyjRequirementStreet}}</view>
+      <view class="td" >{{item.lyjRequirementBegindatetime}}</view>
+      <view class="td" >{{item.lyjRequirementCity}}</view>
+    </view>
+  </block>
+</view>

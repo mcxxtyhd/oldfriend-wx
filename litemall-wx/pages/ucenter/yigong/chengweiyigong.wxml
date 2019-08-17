@@ -1,0 +1,63 @@
+<view class="add-address">
+  <view class="add-form">
+    <view class="form-item">
+      <input class="input" name="userName"  bindinput="bindinputName" placeholder="姓名" auto-focus/>
+    </view>
+    <view class="form-item">
+      <radio-group  bindchange="radioChange" placeholder="姓名">性别
+                <radio  wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+    </view>
+    <view class="form-item">
+      <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class = "picker fonts">
+      国籍：{{array[index]}}
+    </view>
+  </picker>
+    </view>
+    <view class="form-item">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+    <view class="picker">
+      籍贯：{{region[1]}}
+    </view>
+  </picker>
+    </view>
+     <view class="form-item">
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+          <view class="picker">
+            出生日期: {{date}}
+          </view>
+        </picker>
+      </view>
+    <view class="form-item">
+      <input class="input"  name="idCard" bindinput="idCardInput"  placeholder="身份证号" />
+    </view>
+    <view class="form-item">
+      <input class="input"  name="phone" bindinput="phoneInput"  placeholder="手机号" />
+    </view>
+    <view class="form-item">
+      <input class="input"  name="workplace" bindinput="workplaceInput"  placeholder="工作单位" />
+    </view>
+    <view class="form-item">
+      <input class="input"  name="juzhudi" bindinput="juzhudiInput"  placeholder="居住地址" />
+    </view>
+    <!-- <view class="form-item">
+      <input class="input" value="{{address.provinceName +  address.cityName + address.areaName}}" disabled="true" bindtap="chooseRegion" placeholder="省份、城市、区县" />
+    </view>
+    <view class="form-item">
+      <input class="input" bindinput="bindinputAddress" value="{{address.address}}" placeholder="详细地址, 如街道、楼盘号等" />
+    </view>
+    <view class="form-default">
+      <text bindtap="bindIsDefault" class="default-input {{address.isDefault == 1 ? 'selected' : ''}}">设为默认地址</text>
+    </view>-->
+  </view> 
+
+  <view class="btns">
+    <!-- <button class="cannel" bindtap="cancelAddress">取消</button> -->
+    <button class="save" bindtap="saveAddress">提交</button>
+  </view>
+
+ 
+</view>

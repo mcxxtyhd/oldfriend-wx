@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="catalog">
+    <scroll-view class="nav" scroll-y="true">
+      <view class="item {{ currentCategory.id == item.id ? 'active' : ''}}" wx:for="{{categoryList}}" wx:key="lyjRequirementTypeid" data-id="{{item.lyjRequirementTypeid}}" data-index="{{item.lyjRequirementTypeid}}" bindtap="switchCate">{{item.lyjRequirementTypename}}</view>
+    </scroll-view>
+     <scroll-view class="cate" scroll-y="true">
+      <view class="bd">
+        <navigator url="/pages/category/category?id={{item.id}}" class="item {{(index+1) % 2 == 0 ? 'last' : ''}}" wx:key="id" wx:for="{{currentSubCategoryList}}">
+          <image class="icon" src="{{item.picUrl}}"></image>
+          <text class="txt">{{item.name}}</text>
+        </navigator>
+      </view>
+    </scroll-view> 
+    <scroll-view class="cate" scroll-y="true">
+      <view class="bd">
+        <navigator url="/pages/release/xuqiu/xuqiu?category_name={{item.lyjRequirementTypeid}}&name={{item.lyjRequirementTypename}}" class="item {{(index+1) % 2 == 0 ? 'last' : ''}}" wx:key="lyjRequirementTypeid" wx:for="{{currentSubCategoryList}}">
+          <text class="txt">{{item.lyjRequirementTypename}}</text>
+        </navigator>
+      </view>
+    </scroll-view> 
+  </view>
+</view>

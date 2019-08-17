@@ -1,0 +1,81 @@
+<view class="add-address">
+  <view class="add-form">
+    <view class="form-item">类别：
+      <input class="input" disabled="true" value = "{{caname}}" auto-focus/>
+    </view>
+    <view class="form-item">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+    <view class="picker">
+      籍贯：{{region[0]}},{{region[1]}},{{region[2]}}
+    </view>
+  </picker>
+    </view>
+ 
+ <view class="form-item">城市：
+      <input class="input" disabled="true"  value = "{{region[0]}}" auto-focus/>
+    </view>
+
+     <view class="form-item">区县：
+      <input class="input" disabled="true"  value = "{{region[1]}}" auto-focus/>
+    </view>
+
+     <view class="form-item">街道：
+      <input class="input" disabled="true"  value = "{{region[2]}}" auto-focus/>
+    </view>
+
+
+    <view class="form-item">
+        <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+      <view class="tui-picker-detail">
+        选择日期时间: {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+      </view>
+       </picker>
+    </view>
+    <!-- <view class="form-item">
+      <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class = "picker fonts">
+      国籍：{{array[index]}}
+    </view>
+  </picker>
+    </view> -->
+    
+    
+    <view class="form-item">
+      <input class="input"  name="jifen" bindinput="changejifen"  placeholder="积分" />
+    </view>
+    <view class="form-item">
+      <input class="input"  name="dizhi" bindinput="changedizhi"  placeholder="地址" />
+    </view>
+    <view class="form-item">
+      <input class="input"  name="menpai" bindinput="changemenpai"  placeholder="门牌号" />
+    </view>
+    
+    <view class="form-item">
+       <radio-group  bindchange="radioChange" placeholder="姓名">义工优先性别:
+                <radio  wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+    </view>
+  <view class="form-item">
+      <textarea bindblur="bindTextAreaBlur" auto-height placeholder="需求描述" />
+    </view>
+   
+    <!-- <view class="form-item">
+      <input class="input" value="{{address.provinceName +  address.cityName + address.areaName}}" disabled="true" bindtap="chooseRegion" placeholder="省份、城市、区县" />
+    </view>
+    <view class="form-item">
+      <input class="input" bindinput="bindinputAddress" value="{{address.address}}" placeholder="详细地址, 如街道、楼盘号等" />
+    </view>
+    <view class="form-default">
+      <text bindtap="bindIsDefault" class="default-input {{address.isDefault == 1 ? 'selected' : ''}}">设为默认地址</text>
+    </view>-->
+  </view> 
+
+  <view class="btns">
+    <!-- <button class="cannel" bindtap="cancelAddress">取消</button> -->
+    <button class="save" bindtap="formSubmit">发布</button>
+  </view>
+
+ 
+</view>
